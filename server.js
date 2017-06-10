@@ -10,15 +10,15 @@ var express = require('express'),
 	JawboneStrategy = require('passport-oauth').OAuth2Strategy,
 	port = 5000,
 	jawboneAuth = {
-        clientID: 'F9lnkFsZ8lg',
-        clientSecret: 'a1f1dfd27441d250685888204aa3b3ca7206b25a',
+        clientID: 'VotreClientID',
+        clientSecret: 'VotreClientSecret',
         authorizationURL: 'https://jawbone.com/auth/oauth2/auth',
         tokenURL: 'https://jawbone.com/auth/oauth2/token',
-        callbackURL: 'https://localhost:5000/fitkeeper/userdata.html'
+        callbackURL: 'https://localhost:5000/fitkeeper/userdata.html' //mettez votre redirect page d'ici
     },
 	sslOptions = {
-		key: fs.readFileSync('./server.key'),
-		cert: fs.readFileSync('./server.crt')
+		key: fs.readFileSync('./server.key'), //déplacez votre certificat file .key d'ici
+		cert: fs.readFileSync('./server.crt') //déplacez votre certificat file .crt d'ici
 	};
 
 	app.use(bodyParser.json());
@@ -33,7 +33,7 @@ app.use(passport.initialize());
 
 app.get('/fitkeeper/login', 
 	passport.authorize('jawbone', {
-		scope: ['basic_read','sleep_read','move_read'],
+		scope: ['basic_read','sleep_read','move_read'], // limitez votre scope d'ici pour récupérer les données correspondantes
 		failureRedirect: '/'
 	})
 );
@@ -121,7 +121,7 @@ passport.use('jawbone', new JawboneStrategy({
     	}
     });*/
 }));
-
+// ----- Send mail set up ----- //
 var sendmail = function(rapport){
     
     var api_key = 'key-7d0c73b34f77198f3464f688c1e6e2b3';
