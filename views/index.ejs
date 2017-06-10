@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<title>Jawbone UP API with Node Demo</title>
+        <script  type = "text/javascript"  src = "/node_modules/ejs/ejs.js" ></script>
+         <style type="text/css">
+		body {
+			background: url(/images/bg-space-purple.jpg) top center #000 no-repeat;
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #fff;
+			font-size: 36px;
+		}
+                p {
+                        color: #fff;
+                        font-size: 30px;
+                }
+		.sleep-table {
+			background-color: rgba(153,102,255,0.5);
+			border-collapse: collapse;
+			margin: 0 auto;
+			width: 30%;
+		}
+		.sleep-table tr th {
+			background: rgba(204, 102, 204, 0.5);
+		}
+		.sleep-table tr th,
+		.sleep-table tr td {
+			border: 1px solid rgba(204, 153, 255, 0.5);
+			color: #fff;
+			font-weight: normal;
+			padding: 10px 25px;
+		}
+		.btn {
+			background-color: #9D65FF;
+			color: #fff;
+			display: block;
+			font-size: 24px;
+			margin: 30px auto;
+			padding: 10px;
+			text-decoration: none;
+			width: 40%;
+		}
+		.btn:hover {
+			background-color: #C893FF;
+		}
+	</style>
+</head>
+<body>
+	<h1>Jawbone UP User Data</h1>
+	<p>Log in to see your latest User Data.</p>
+	<a href="/fitkeeper/login" class="btn">Login</a>
+</body>
+</html>
