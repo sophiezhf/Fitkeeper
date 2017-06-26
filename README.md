@@ -25,7 +25,7 @@ peut suivre leur sommeil et leur activité sportive pour améliorer leur santé.
   
 
 ## Environnement requirements
-* [Serveur HTTPS](https://doc.ubuntu-fr.org/tutoriel/securiser_apache2_avec_ssl) (OPENSSL pre-install)
+* [Serveur HTTPS](https://www.it-connect.fr/mettre-en-place-une-connexion-ssl-avec-wamp%EF%BB%BF/) (OPENSSL pre-install)
   
   `openssl req -new -key server.key > server.csr`
   
